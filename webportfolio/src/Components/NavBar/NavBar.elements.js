@@ -7,9 +7,10 @@ export const NavContainer = styled.nav`
   height: 60px;
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
+  background-color: ${({theme}) => theme.colors.gray};
 `
 
 export const NavUl = styled.ul`
@@ -27,15 +28,12 @@ export const NavLink = styled.a`
   text-decoration: none;
   font-weight: 500;
   font-size: 24px;
-  font-style: italic;
   margin-left: 40px;
   &:hover {
     text-decoration: underline;
     cursor: pointer;
   }
   &:active {
-    transform: scaleY(10px);
+    color: ${({theme}) => theme.colors.darkTeal};
   }
-  
-
 `

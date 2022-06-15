@@ -2,7 +2,7 @@ import React from 'react'
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
 
-function ParticleBackground() {
+function ParticleBackground({ colorTheme }) {
   const particlesInit = async (main) => {
     console.log(main);
     await loadFull(main);
@@ -24,18 +24,18 @@ function ParticleBackground() {
             zIndex: 0
           },
           background: {
-            color: '#66fcf1',
+            color: colorTheme.colors.lightTeal,
           },
           fpsLimit: 60,
           interactivity: {
-            detectsOn: 'canvas',
+            detectsOn: 'window',
             events: {
               resize: true
             }, 
           },
           particles: {
             color: {
-              value: '#0b0c10'
+              value: colorTheme.colors.dark
             },
             number: {
               density: {

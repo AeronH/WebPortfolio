@@ -7,8 +7,9 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Sora', sans-serif;
     scroll-behavior: smooth;
+    scroll-padding-top: 60px;
   }
 
   #particles {
@@ -24,6 +25,26 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
+`
+
+export const DefaultButton = styled.button`
+  height: 50px;
+  width: 100px;
+  font-size: 16px;
+  color: ${({theme}) => theme.colors.dark};
+  border: 1px solid ${({theme}) => theme.colors.dark};
+  border-radius: 3px;
+  background-color: transparent;
+  transition: .25s;
+  &:hover {
+    background-color: ${({theme}) => theme.colors.darkTeal};
+    cursor: pointer;
+    opacity: .8;
+  }
+`
+
+export const GlobalContainer = styled.div`
+  height: fit-content;
 `
 
 export default GlobalStyles
