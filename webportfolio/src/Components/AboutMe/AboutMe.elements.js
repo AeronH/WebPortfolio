@@ -44,18 +44,51 @@ export const Title = styled.h2`
   font-weight: 300;
   color: ${({theme}) => theme.colors.dark};
 `
+
 export const MyParagraph = styled.p`
   color: ${({theme}) => theme.colors.dark};
   margin: 48px 0;
+  font-size: 20px;
 `
 
 export const Image = styled.img`
   height: 500px;
+  border-radius: 50px;
+  box-shadow: 4px 4px 10px black;
 `
 
 export const MySkills = styled.div`
   width: 50%;
   height: 100%;
+`
+
+export const SkillsList = styled.ul`
+  margin-left: 48px;
+  color: ${({theme}) => theme.colors.dark};
+  display: flex;
+  align-items: flex-start;
+  list-style: none;
+  flex-wrap: wrap;
+`
+
+export const Skill = styled.li`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px 32px;
+  width: 80px;
+`
+
+export const SkillName = styled.p`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 40px;
+`
+
+export const SkillImage = styled.img`
+  height: 80px;
+  margin-top: 16px;
 `
 
 
