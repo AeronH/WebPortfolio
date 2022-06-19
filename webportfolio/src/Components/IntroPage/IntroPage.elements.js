@@ -62,7 +62,7 @@ export const Links = styled.div`
   gap: 32px;
 `
 
-export const IconButton = styled.button`
+export const IconButton = styled.a`
   background-color: transparent;
   border: none;
   transform: scale(1.5);

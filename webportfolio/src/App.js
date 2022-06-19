@@ -52,7 +52,7 @@ function App() {
     }
   };
 
-  const [colorTheme, setColorTheme] = useState('light');
+  const [colorTheme, setColorTheme] = useState('dark');
 
   return (
     <ThemeProvider theme ={colorTheme === 'light' ? lightTheme : darkTheme}>

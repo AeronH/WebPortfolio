@@ -32,7 +32,7 @@ const changeTheme = () => {
           </Introduction>
 
           <Links>
-            <IconButton><GitHubIcon /></IconButton>
+            <IconButton href="https://github.com/AeronH" target="_blank"><GitHubIcon /></IconButton>
 
             <IconButton><LinkedInIcon /></IconButton>
 
