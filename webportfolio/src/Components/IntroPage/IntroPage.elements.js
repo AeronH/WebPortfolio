@@ -28,6 +28,9 @@ export const TitleCard = styled.div`
   justify-content: center;
   padding: 24px;
   margin-top: 100px;
+  @media (max-height: 709px) {
+    margin-top: 50px;
+  }
 `
 
 export const Introduction = styled.div`
@@ -86,4 +89,5 @@ export const SeeMore = styled(DefaultButton)`
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  margin-bottom: 8vh;
 `

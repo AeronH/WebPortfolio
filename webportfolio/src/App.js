@@ -55,25 +55,26 @@ function App() {
   const [colorTheme, setColorTheme] = useState('dark');
 
   return (
-    <ThemeProvider theme ={colorTheme === 'light' ? lightTheme : darkTheme}>
+    
       <div className="App">
-        <GlobalStyles />
-        
-        <IntroPage setColorTheme={setColorTheme}
-                   colorTheme={colorTheme}
-                   darkTheme={darkTheme}
-                   lightTheme={lightTheme}/>
-        <GlobalContainer>
-          <NavBar />
-          <AboutPage/>
+        <ThemeProvider theme ={colorTheme === 'light' ? lightTheme : darkTheme}>
+          <GlobalStyles />
+          
+          <IntroPage setColorTheme={setColorTheme}
+                    colorTheme={colorTheme}
+                    darkTheme={darkTheme}
+                    lightTheme={lightTheme}/>
+          <GlobalContainer>
+            <NavBar />
+            <AboutPage/>
 
-          <MyWork/>
+            <MyWork/>
 
-          <Contact/>
-        </GlobalContainer>
-        
+            <Contact/>
+          </GlobalContainer>
+        </ThemeProvider>
       </div>
-    </ThemeProvider>
+    
   );
 }
 
