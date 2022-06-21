@@ -8,6 +8,9 @@ import jsImage from '../Images/600px-JavaScript-logo.png'
 import reactImage from '../Images/pngwing.com (1).png'
 import scImage from '../Images/styled-components.png'
 import fbImage from '../Images/kisspng-firebase-cloud-messaging-computer-icons-google-clo-github-5ad5d3ce4fc460.4730334415239628303267.png'
+import nextImage from'../Images/800px-Nextjs-logo.svg.png'
+import tsImage from '../Images/Typescript_logo_2020.svg.png'
+import twImage from '../Images/Tailwind_CSS_Logo.svg.png'
 
 function AboutPage() {
   return (
@@ -45,8 +48,23 @@ function AboutPage() {
               </Skill>
 
               <Skill>
+                <SkillName>TypeScript</SkillName>
+                <SkillImage src={tsImage} />
+              </Skill>
+
+              <Skill>
                 <SkillName>React</SkillName>
                 <SkillImage src={reactImage} />
+              </Skill>
+
+              <Skill>
+                <SkillName>NextJS</SkillName>
+                <SkillImage src={nextImage} />
+              </Skill>
+
+              <Skill>
+                <SkillName>Tailwind CSS</SkillName>
+                <SkillImage src={twImage} />
               </Skill>
 
               <Skill>
