@@ -16,18 +16,6 @@ export const Wrapper = styled(Container)`
   padding-top: 64px;
 `
 
-export const AboutTitle = styled.h1`
-  width: 100%;
-  height: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: ${({theme}) => theme.colors.dark};
-  text-decoration: underline;
-  font-size: 40px;
-  font-weight: 300;
-`
-
 export const Info = styled.div`
   height: 85%;
   width: 100%;

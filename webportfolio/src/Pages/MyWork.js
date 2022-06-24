@@ -1,8 +1,12 @@
 import React from 'react'
+import { Work } from '../Components/MyWork/MyWork.elements'
+import { PageTitle } from '../GlobalStyles'
 
 function MyWork() {
   return (
-    <div id='MyWork'>MyWork</div>
+    <Work id="MyWork">
+      <PageTitle>My Work</PageTitle>
+    </Work>
   )
 }
 
