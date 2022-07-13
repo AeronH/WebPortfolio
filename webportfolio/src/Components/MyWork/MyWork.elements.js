@@ -7,6 +7,18 @@ export const Work = styled.section`
   padding-top: 32px;
 `
 
+export const Wrapper = styled(Container)`
+  padding: 32px;
+  min-height: 950px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const WorkContainer = styled.div`
+  
+`
+
 export const WorkCard = styled.div`
   
 `

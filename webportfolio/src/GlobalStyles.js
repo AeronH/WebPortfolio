@@ -53,15 +53,14 @@ export const DefaultButton = styled.button`
 `
 
 export const PageTitle = styled.h1`
-  width: 100%;
+  width: fit-content;
   height: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: ${({theme}) => theme.colors.dark};
+  background: -webkit-linear-gradient(left, white, gray);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: underline;
   font-size: 40px;
-  font-weight: 300;
+  font-weight: 500;
 `
 
 export const GlobalContainer = styled.div`

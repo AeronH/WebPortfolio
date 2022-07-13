@@ -8,8 +8,6 @@ import GlobalStyles, { GlobalContainer } from './GlobalStyles';
 import { ThemeProvider } from 'styled-components';
 import { useState } from 'react'
 
-
-
 function App() {
 
   // const lightTheme = {
@@ -61,9 +59,9 @@ function App() {
           <GlobalStyles />
           
           <IntroPage setColorTheme={setColorTheme}
-                    colorTheme={colorTheme}
-                    darkTheme={darkTheme}
-                    lightTheme={lightTheme}/>
+                     colorTheme={colorTheme}
+                     darkTheme={darkTheme}
+                     lightTheme={lightTheme}/>
           <GlobalContainer>
             <NavBar />
             <AboutPage/>

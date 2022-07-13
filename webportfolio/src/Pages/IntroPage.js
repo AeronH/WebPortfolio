@@ -21,7 +21,7 @@ const changeTheme = () => {
         <Theme>
           <IconButton onClick={changeTheme}>
             {colorTheme === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
-          </IconButton> :                         
+          </IconButton>                         
         </Theme>
 
         <TitleCard>

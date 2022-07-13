@@ -1,11 +1,14 @@
 import React from 'react'
-import { Work } from '../Components/MyWork/MyWork.elements'
+import { Work, Wrapper, WorkContainer, WorkCard } from '../Components/MyWork/MyWork.elements'
 import { PageTitle } from '../GlobalStyles'
 
 function MyWork() {
   return (
     <Work id="MyWork">
-      <PageTitle>My Work</PageTitle>
+      <Wrapper>
+        <PageTitle>My Work</PageTitle>
+
+      </Wrapper>
     </Work>
   )
 }

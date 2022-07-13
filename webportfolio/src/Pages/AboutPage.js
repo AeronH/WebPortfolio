@@ -1,6 +1,6 @@
 import React from 'react'
 import { Wrapper, About, Info, MyInfo, MySkills, SkillsList,
-Title, MyParagraph, Image, Skill, SkillImage, SkillName } from '../Components/AboutMe/AboutMe.elements'
+MyParagraph, Image, ImageWrapper, Skill, SkillImage, SkillName } from '../Components/AboutMe/AboutMe.elements'
 import { PageTitle } from '../GlobalStyles'
 import image from '../Images/AustinMap.PNG'
 import htmlImage from '../Images/html5-logo-31813.png'
@@ -17,21 +17,21 @@ function AboutPage() {
   return (
     <About  id='AboutMe'>
       <Wrapper>
-        <PageTitle>About Me</PageTitle>
         <Info>
           <MyInfo>
-            <Title>Who am I?</Title>
+            <PageTitle>About Me</PageTitle>
 
             <MyParagraph>
               I am a Software Developer based in Austin, TX. I specialize in creating
               high quality websites and apps made with a variety of modern technologies.
             </MyParagraph>
-            
-            <Image src={image} />
+            <ImageWrapper>
+              <Image image={image}></Image>
+            </ImageWrapper>
           </MyInfo>
 
           <MySkills>
-            <Title>Skills:</Title>
+            <PageTitle>Skills:</PageTitle>
             <SkillsList>
               <Skill>
                 <SkillName>HTML</SkillName>
@@ -58,10 +58,10 @@ function AboutPage() {
                 <SkillImage src={reactImage} />
               </Skill>
 
-              {/* <Skill>
+              <Skill>
                 <SkillName>NextJS</SkillName>
                 <SkillImage src={nextImage} />
-              </Skill> */}
+              </Skill>
 
               <Skill>
                 <SkillName>Tailwind CSS</SkillName>
