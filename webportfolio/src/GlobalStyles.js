@@ -55,9 +55,7 @@ export const DefaultButton = styled.button`
 export const PageTitle = styled.h1`
   width: fit-content;
   height: 15%;
-  background: -webkit-linear-gradient(left, white, gray);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: ${({theme}) => theme.colors.dark};
   text-decoration: underline;
   font-size: 40px;
   font-weight: 500;

@@ -43,8 +43,7 @@ export const MyInfo = styled.div`
 `
 
 export const MyParagraph = styled.p`
-  /* color: ${({theme}) => theme.colors.dark}; */
-  color: #eeee;
+  color: ${({theme}) => theme.colors.dark};
   margin: 48px 0;
   font-size: 20px;
   opacity: 70%;
