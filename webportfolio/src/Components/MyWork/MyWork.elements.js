@@ -27,57 +27,48 @@ export const WorkContainer = styled.div`
 `
 
 export const WorkCardContainer = styled.div`
-  height: 460px; 
-  width: 340px;
-  transition: 500ms linear;
-`
-
-export const PreHoverContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* filter: blur(2px); */
-  border-radius: 10px;
-  box-shadow: inset 0 0 0 1000px rgba(249, 191, 59, .7);
-`
-
-export const PostHoverContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  height: 100%;
-  width: 100%;
-  background-color: ${({theme}) => theme.colors.darkTeal};
-  border-radius: 10px;
+  justify-content: space-between;
+  height: 460px;
+  width: 340px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(100, 100, 100, .6);
   padding: 24px;
 `
 
+export const WorkImage = styled.img`
+  scale: .8;
+  margin-top: 18px;
+`
+
 export const WorkTitle = styled.h1`
-  color: ${({theme}) => theme.colors.dark};
+  text-decoration: underline;
+  margin-top: 18px;
 `
 
 export const WorkDesc = styled.p`
-  color: ${({theme}) => theme.colors.dark};
+  color: black;
+  opacity: 110;
 `
 
 export const WorkLinks = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
+  margin-top: 18px;
 `
 
 export const WorkLink = styled.a`
-  color: ${({theme}) => theme.colors.dark};
-  border: 2px solid ${({theme}) => theme.colors.lightDark};
+  border: 2px solid black;
   padding: 10px 16px;
-  border-radius: 100px;
   text-decoration: none;
+  background-color: lightgray;
+  color: black;
   :hover {
-    background-color: ${({theme}) => theme.colors.gray}
+    background-color: ${({theme}) => theme.colors.gray};
+    cursor: pointer;
   }
 `

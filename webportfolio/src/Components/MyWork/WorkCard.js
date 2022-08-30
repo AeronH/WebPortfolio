@@ -1,33 +1,27 @@
-import React, { useState } from 'react'
-import { WorkCardContainer, PreHoverContainer, PostHoverContainer, WorkTitle, WorkDesc, WorkLinks, WorkLink } from './MyWork.elements';
+import React from 'react'
+import { WorkCardContainer, WorkDesc, WorkLinks, WorkLink, WorkTitle } from './MyWork.elements';
 
-function WorkCard({image, logo, title, description, links}) {
+function WorkCard({project}) {
 
-  const [hoverCard, setHoverCard] = useState(false);
+  
 
   return (
-    <WorkCardContainer 
-      onMouseEnter={() => setHoverCard(true)} 
-      onMouseLeave={() => setHoverCard(false)}>
-
-      {!hoverCard ?
-      <PreHoverContainer style={{backgroundImage: `url(${image})`}}>
-        <img src={logo} style={{scale: '.7'}}/>
-      </PreHoverContainer>
-      :
-        <PostHoverContainer>
-          <WorkTitle>{title}</WorkTitle>
-          <WorkDesc>{description}</WorkDesc>
+      <WorkCardContainer style={{backgroundImage: `url(${project.image})`}}>
+        <WorkTitle>{project.title}</WorkTitle>
+        <div>
+          <WorkDesc>
+            {project.description}
+          </WorkDesc>
           <WorkLinks>
-            <WorkLink href={links.githubLink} target='_blank'>Code</WorkLink>
-            <WorkLink href={links.siteLink} target='_blank'>Visit Site</WorkLink>
+            <WorkLink href={project.siteLink} target='_blank'>Live Site</WorkLink>
+            <WorkLink href={project.githubLink} target='_blank'>&#60; View Code &#62;</WorkLink>
           </WorkLinks>
-        </PostHoverContainer>
-      }
-
-    </WorkCardContainer>
+        </div>
+      </WorkCardContainer>
     )
   
 }
+
+
 
 export default WorkCard

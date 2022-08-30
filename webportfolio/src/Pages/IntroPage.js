@@ -34,7 +34,7 @@ const changeTheme = () => {
           <Links>
             <IconButton href="https://github.com/AeronH" target="_blank"><GitHubIcon /></IconButton>
 
-            <IconButton><LinkedInIcon /></IconButton>
+            <IconButton href='https://www.linkedin.com/in/aeron-horne-051b2a242/' target="_blank"><LinkedInIcon /></IconButton>
 
             <DefaultButton>Resume</DefaultButton>
           </Links>

@@ -10,26 +10,6 @@ import { useState } from 'react'
 
 function App() {
 
-  // const lightTheme = {
-  //   colors: {
-  //     dark: '#0b0c10',
-  //     lightDark: '#1f2833',
-  //     gray: '#c5c6c7',
-  //     darkTeal: '#45a29e',
-  //     lightTeal: '#66fcf1'
-  //   }
-  // };
-
-  // const darkTheme = {
-  //   colors :{
-  //     dark: '#66fcf1',
-  //     lightDark: '#45a29e',
-  //     gray: '#c5c6c7',
-  //     darkTeal: '#1f2833',
-  //     lightTeal: '#0b0c10'
-  //   }
-  // };
-
   const lightTheme = {
     colors: {
       dark: '#0d1321',
@@ -64,9 +44,10 @@ function App() {
                      lightTheme={lightTheme}/>
           <GlobalContainer>
             <NavBar />
+            
             <AboutPage/>
 
-            <MyWork/>
+            <MyWork />
 
             <Contact/>
           </GlobalContainer>
