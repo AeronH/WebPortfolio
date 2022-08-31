@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Sora', sans-serif;
     scroll-behavior: smooth;
-    scroll-padding-top: 60px;
+    /* scroll-padding-top: 60px; */
   }
 
   html
@@ -56,7 +56,6 @@ export const PageTitle = styled.h1`
   width: fit-content;
   height: 15%;
   color: ${({theme}) => theme.colors.dark};
-  text-decoration: underline;
   font-size: 40px;
   font-weight: 500;
 `

@@ -43,7 +43,7 @@ function ParticleBackground({ colorTheme }) {
                 area: 1080
               },
               limit: 0,
-              value: 100
+              value: 70
             },
             opacity: {
               animation: {
@@ -59,22 +59,22 @@ function ParticleBackground({ colorTheme }) {
               value: 1
             },
             shape: {
-              type: 'square'
+              type: 'circle'
             },
             size: {
               random: {
                 enable: true,
-                minimumValue: 3
+                minimumValue: 1
               },
               value: 2
             },
             move: {
               enable: true,
-              speed: 0.5
+              speed: 0.35
             },
             links: {
               enable: true,
-              distance: 80,
+              distance: 180,
               color: 'random'
             }
           }

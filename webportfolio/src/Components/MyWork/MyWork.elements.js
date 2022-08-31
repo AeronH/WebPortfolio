@@ -3,7 +3,7 @@ import { Container } from '../../GlobalStyles'
 
 export const Work = styled.section`
   background-color: ${({theme}) => theme.colors.lightTeal}; 
-  min-height: fit-content; 
+  min-height: 100vh; 
   padding-top: 32px;
 `
 

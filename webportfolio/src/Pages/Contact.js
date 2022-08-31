@@ -2,7 +2,7 @@ import React from 'react'
 
 function Contact() {
   return (
-    <div id='Contact'>Contact</div>
+    <div data-scroll-section id='Contact'>Contact</div>
   )
 }
 

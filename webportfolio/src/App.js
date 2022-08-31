@@ -1,5 +1,4 @@
 import './App.css';
-import NavBar from './Components/NavBar/NavBar';
 import IntroPage from './Pages/IntroPage';
 import AboutPage from './Pages/AboutPage';
 import MyWork from './Pages/MyWork'
@@ -34,23 +33,35 @@ function App() {
 
   return (
     
+    
       <div className="App">
         <ThemeProvider theme ={colorTheme === 'light' ? lightTheme : darkTheme}>
+          
+                <IntroPage setColorTheme={setColorTheme}
+                          colorTheme={colorTheme}
+                          darkTheme={darkTheme}
+                          lightTheme={lightTheme}/>
+              
+              
+              <GlobalContainer>
+
+                
+                  <AboutPage />
+                
+
+                
+                  <MyWork />
+                
+
+                
+                  <Contact />
+                
+
+              </GlobalContainer>
+           
           <GlobalStyles />
           
-          <IntroPage setColorTheme={setColorTheme}
-                     colorTheme={colorTheme}
-                     darkTheme={darkTheme}
-                     lightTheme={lightTheme}/>
-          <GlobalContainer>
-            <NavBar />
-            
-            <AboutPage/>
-
-            <MyWork />
-
-            <Contact/>
-          </GlobalContainer>
+          
         </ThemeProvider>
       </div>
     

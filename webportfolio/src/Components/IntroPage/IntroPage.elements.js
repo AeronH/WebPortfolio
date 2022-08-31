@@ -1,33 +1,34 @@
 import styled from 'styled-components'
 import { Container, DefaultButton } from '../../GlobalStyles'
-
+import { motion } from 'framer-motion'
 
 export const IntroPageContainer = styled(Container)`
-  height: calc(100vh);
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
+  max-width: 100vw;
 `
 
 export const Theme = styled.div`
   height: fit-content;
   width: fit-content;
   position: absolute;
-  top: 32px;
-  right: 32px;
+  top: 36px;
+  right: 36px;
 `
 
 export const TitleCard = styled.div`
   max-height: 500px;
   height: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 24px;
-  margin-top: 100px;
+  margin-top: 160px;
   @media (max-height: 709px) {
     margin-top: 50px;
   }
@@ -37,24 +38,24 @@ export const Introduction = styled.div`
   letter-spacing: 1px;
 `
 
-export const Intro1 = styled.p`
-  font-size: 32px;
-  font-weight: 300;
-  color: ${({theme}) => theme.colors.lightDark};
-  margin-bottom: 4px;
-`
-
-export const Name = styled.h1`
+export const Name = styled(motion.h1)`
   color: ${({theme}) => theme.colors.dark};
-  font-size: 72px;
-  font-weight: 700;
+  font-size: 96px;
+  font-weight: 400;
   margin-bottom: 8px;
+  @media (max-width: 768px) {
+    font-size: 64px;
+  }
 `
 
-export const Intro2 = styled.h2`
+export const Intro2 = styled(motion.h2)`
   font-size: 48px;
-  color: ${({theme}) => theme.colors.lightDark};
+  font-weight: 300;
+  color: ${({theme}) => theme.colors.dark};
   margin-bottom: 24px;
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 `
 
 export const Links = styled.div`
@@ -71,6 +72,7 @@ export const IconButton = styled.a`
   transform: scale(1.5);
   transition: 0.25s;
   color: ${({theme}) => theme.colors.dark};
+  display: flex;
   &:hover {
     transform: scale(1.6);
     cursor: pointer;
@@ -83,6 +85,18 @@ export const IconButton = styled.a`
   }
 `
 
+export const ResumeButton = styled(DefaultButton)`
+  background-color: ${({theme}) => theme.colors.lightTeal};
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  :active {
+    background-color: ${({theme}) => theme.colors.lightTeal};
+  }
+`
+
 export const SeeMore = styled(DefaultButton)`
   width: 250px;
   display: flex;
@@ -90,4 +104,6 @@ export const SeeMore = styled(DefaultButton)`
   justify-content: center;
   text-decoration: none;
   margin-bottom: 8vh;
+  background-color: ${({theme}) => theme.colors.lightTeal};
+  font-weight: 600;
 `
