@@ -4,7 +4,6 @@ import { PageTitle } from '../../GlobalStyles'
 import { motion } from 'framer-motion'
 
 export const About = styled.section`
-  background-color: ${({theme}) => theme.colors.dark}; 
   min-height: 100vh; 
 `
 
@@ -15,6 +14,7 @@ export const Wrapper = styled(Container)`
   flex-direction: column;
   margin: 0 auto;
   padding: 64px 32px 32px 32px;
+  overflow: hidden;
   @media (max-width: 1057px) {
     align-items: center;
   }
@@ -65,9 +65,9 @@ export const Image = styled.div`
   /* border-radius: 50px; */
   box-shadow: 0 0 5px 10px ${({theme}) => theme.colors.dark} inset;
   @media (max-width: 1057px) {
-    width: 70%;
+    width: 50vw;
     max-width: 500px;
-    height: 70%;
+    height: 50vw;
     max-height: 500px;
   }
 `
@@ -107,6 +107,9 @@ export const Skill = styled.li`
   align-items: center;
   margin: 16px 32px;
   width: 80px;
+  @media (max-width: 1057px) {
+    margin: 16px;
+  }
 `
 
 export const SkillName = styled.p`

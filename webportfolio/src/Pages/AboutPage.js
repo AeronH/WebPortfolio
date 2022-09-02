@@ -26,7 +26,7 @@ function AboutPage() {
   }, [control, inView]);
 
   return (
-    <About data-scroll-section id='AboutMe'>
+    <About data-scroll-section id='AboutPage'>
       <Wrapper>
         <Info
           ref={ref}

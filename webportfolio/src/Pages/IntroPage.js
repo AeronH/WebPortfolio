@@ -16,13 +16,14 @@ const changeTheme = () => {
   setColorTheme(newTheme);
 }
 
-const container = {
-  hidden: { y: '-3vw', opacity : 0},
+const variant = {
+  hidden: { x: '10vw', opacity : 0},
   visible: { 
-      y: 0, 
+      x: 0, 
       opacity: 1,
       transition: {
-        duration: 1
+        type: 'spring',
+        duration: 2.5
       }
   }
 }
@@ -41,15 +42,14 @@ const container = {
             <Name
               animate='visible'
               initial='hidden'
-              variants={container}
-              type='spring'>
+              variants={variant}>
                 Aeron Horne
             </Name>
 
             <Intro2
-              variants={container}
+              variants={variant}
               initial={{ x: '-35vw', opacity: 0}}
-              animate={{ x: 0, opacity: 1, transition: {type: 'spring', duration: 2.5, delay: 0.75}}}>
+              animate={{ x: 0, opacity: 1, transition: {type: 'spring', duration: 2.5, delay: .75}}}>
                 Software Developer.
             </Intro2>
           </Introduction>
@@ -59,11 +59,11 @@ const container = {
 
             <IconButton href='https://www.linkedin.com/in/aeron-horne-051b2a242/' target="_blank"><LinkedInIcon /></IconButton>
 
-            <ResumeButton as='a' href='https://drive.google.com/file/d/1GfM3zGdzJT5i2jUuHM4u2ftoijSJLXfr/view?usp=sharing' target="_blank">Resume</ResumeButton>
+            <ResumeButton as='a' href='https://drive.google.com/file/d/1ES3ircOo_85lmCVAIvV1zq5lnkBCz7-v/view?usp=sharing' target="_blank">Resume</ResumeButton>
           </Links>
         </TitleCard>
 
-        <SeeMore as='a' href='#AboutMe'>
+        <SeeMore as='a' href='#AboutPage'>
           <KeyboardArrowDownIcon/>See More<KeyboardArrowDownIcon/>
         </SeeMore>
         

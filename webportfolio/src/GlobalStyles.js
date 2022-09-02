@@ -1,3 +1,4 @@
+import { colors } from "@mui/material";
 import styled, { createGlobalStyle } from "styled-components";
 
 
@@ -62,6 +63,7 @@ export const PageTitle = styled.h1`
 
 export const GlobalContainer = styled.div`
   height: fit-content;
+  background-color: ${({theme}) => theme.colors.dark};
 `
 
 export default GlobalStyles

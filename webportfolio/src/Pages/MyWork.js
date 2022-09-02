@@ -1,22 +1,38 @@
-import React from 'react'
-import { Work, Wrapper, WorkContainer } from '../Components/MyWork/MyWork.elements'
-import { PageTitle } from '../GlobalStyles'
+import React, { useEffect } from 'react'
+import { Work, Wrapper, WorkContainer, WorkPageTitle } from '../Components/MyWork/MyWork.elements'
 import WorkCard from '../Components/MyWork/WorkCard'
 import { projects } from '../utils/projects'
+import { useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { variant } from '../utils/variants'
 
 function MyWork() {
 
-  return (
-    <Work data-scroll-section id="MyWork">
-      <Wrapper>
-        <PageTitle>My Work</PageTitle>
-        <WorkContainer>
-          
-          {projects.map((project) => (
-            <WorkCard project={project} />
-          ))}
+  const control = useAnimation();
+  const [ref, inView] = useInView();
 
-        </WorkContainer>
+  useEffect(() => {
+    if(inView) control.start('visible');
+  }, [control, inView]);
+
+  return (
+    <Work 
+      data-scroll-section 
+      id="MyWork">
+      <Wrapper >
+          <WorkPageTitle
+            ref={ref}
+            variants={variant}
+            initial='hidden'
+            animate={control}>Projects</WorkPageTitle>
+          <WorkContainer>
+            
+            {projects.map((project, i) => (
+              <WorkCard project={project} key={i}/>
+            ))}
+
+          </WorkContainer>
+          
       </Wrapper>
     </Work>
   )

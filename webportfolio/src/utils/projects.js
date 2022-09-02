@@ -6,6 +6,7 @@ export const projects = [
     image: BlogEmpireImage,
     title: 'Blog Empire',
     description: 'BlogEmpire is a social media site that allows users to login using their google account and make blog posts under varying categories.',
+    builtWith: ['NextJS', 'TailwindCSS', 'Typescript', 'Firebase', 'ChakraUI'],
     siteLink: 'https://blogempire.vercel.app',
     githubLink: 'https://github.com/AeronH/blogempire'
     
@@ -13,6 +14,7 @@ export const projects = [
   {
     image: AqiScanImage,
     title: 'AQI-Scan',
+    builtWith: ['React', 'TailwindCSS', 'Typescript', 'MaterialUI', 'Mapbox', 'Axios'],
     description: 'Aqi Scan is an app that allows users to see the air quality index of places around the world on an interactive map and select which one they want more indepth information on.',
     siteLink: 'https://aqi-scan.vercel.app',
     githubLink: 'https://github.com/AeronH/aqi-scan'
