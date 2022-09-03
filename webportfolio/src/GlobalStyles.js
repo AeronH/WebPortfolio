@@ -56,7 +56,7 @@ export const DefaultButton = styled.button`
 export const PageTitle = styled.h1`
   width: fit-content;
   height: 15%;
-  color: ${({theme}) => theme.colors.dark};
+  color: ${({theme}) => theme.colors.lightTeal};
   font-size: 40px;
   font-weight: 500;
 `

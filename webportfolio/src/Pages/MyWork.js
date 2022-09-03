@@ -16,15 +16,16 @@ function MyWork() {
   }, [control, inView]);
 
   return (
-    <Work 
-      data-scroll-section 
-      id="MyWork">
+    <Work id="MyWork">
       <Wrapper >
           <WorkPageTitle
             ref={ref}
             variants={variant}
             initial='hidden'
-            animate={control}>Projects</WorkPageTitle>
+            animate={control}>
+              Projects
+          </WorkPageTitle>
+          
           <WorkContainer>
             
             {projects.map((project, i) => (

@@ -61,7 +61,7 @@ export const WorkCardContainer = styled(motion.div)`
   align-items: flex-end;
   justify-content: space-around;
   height: 460px;
-  width: 90%;
+  width: 100%;
   padding: 48px 24px;
   @media(max-width: 1057px) {
     padding: 48px 0;
@@ -79,8 +79,8 @@ export const WorkImage = styled.div`
   z-index: -1;
   height: 35vw;
   max-height: 100%;
-  width: 35vw;
-  max-width: 50%;
+  width: 45vw;
+  max-width: 55%;
   background-image: url(${props => props.image});
   background-repeat: no-repeat;
   background-size: cover;
@@ -128,7 +128,7 @@ export const WorkTools = styled.ul`
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
-  width: 50%;
+  width: 45%;
   gap: 16px;
   padding: 0 8px;
   @media(max-width: 714px) {

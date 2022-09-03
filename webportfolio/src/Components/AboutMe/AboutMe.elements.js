@@ -20,10 +20,6 @@ export const Wrapper = styled(Container)`
   }
 `
 
-export const AboutPageTitle = styled(PageTitle)`
-  color: ${({theme}) => theme.colors.lightTeal};
-`
-
 export const Info = styled(motion.div)`
   height: 85%;
   width: 100%;

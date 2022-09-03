@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import { Wrapper, About, Info, MyInfo, MySkills, SkillsList,
 MyParagraph, Image, ImageWrapper, Skill, SkillImage, SkillName,
-AboutPageTitle, Seperator } from '../Components/AboutMe/AboutMe.elements'
+Seperator } from '../Components/AboutMe/AboutMe.elements'
+import { PageTitle } from '../GlobalStyles'
 import image from '../Images/AustinMap.PNG'
 import htmlImage from '../Images/html5-logo-31813.png'
 import cssImage from '../Images/kindpng_4640184.png'
@@ -18,6 +19,18 @@ import { variant } from '../utils/variants'
 
 function AboutPage() {
 
+  const skills = [
+    {name:'HTML', image: htmlImage},
+    {name:'CSS', image: cssImage},
+    {name:'JavaScript', image: jsImage},
+    {name:'TypeScript', image: tsImage},
+    {name:'React', image: reactImage},
+    {name:'NextJS', image: nextImage},
+    {name:'TailwindCSS', image: twImage},
+    {name:'Styled Components', image: scImage},
+    {name:'Firebase', image: fbImage},
+  ]
+
   const control = useAnimation();
   const [ref, inView] = useInView();
 
@@ -26,7 +39,7 @@ function AboutPage() {
   }, [control, inView]);
 
   return (
-    <About data-scroll-section id='AboutPage'>
+    <About id='AboutPage'>
       <Wrapper>
         <Info
           ref={ref}
@@ -35,7 +48,7 @@ function AboutPage() {
           animate={control}>
 
           <MyInfo>
-            <AboutPageTitle>About Me</AboutPageTitle>
+            <PageTitle>About Me</PageTitle>
 
             <MyParagraph>
               I am a Software Developer based in Austin, TX. I specialize in creating
@@ -47,57 +60,23 @@ function AboutPage() {
               <Image image={image}></Image>
             </ImageWrapper>
           </MyInfo>
+
           <Seperator/>
+
           <MySkills>
-            <AboutPageTitle>Skills</AboutPageTitle>
+            <PageTitle>Skills</PageTitle>
             <SkillsList>
-              <Skill>
-                <SkillName>HTML</SkillName>
-                <SkillImage src={htmlImage} />
-              </Skill>
 
-              <Skill>
-                <SkillName>CSS</SkillName>
-                <SkillImage src={cssImage} />
-              </Skill>
-
-              <Skill>
-                <SkillName>JavaScript</SkillName>
-                <SkillImage src={jsImage} />
-              </Skill>
-
-              <Skill>
-                <SkillName>TypeScript</SkillName>
-                <SkillImage src={tsImage} />
-              </Skill>
-
-              <Skill>
-                <SkillName>React</SkillName>
-                <SkillImage src={reactImage} />
-              </Skill>
-
-              <Skill>
-                <SkillName>NextJS</SkillName>
-                <SkillImage src={nextImage} />
-              </Skill>
-
-              <Skill>
-                <SkillName>Tailwind CSS</SkillName>
-                <SkillImage src={twImage} />
-              </Skill>
-
-              <Skill>
-                <SkillName>Styled <br/>Components</SkillName>
-                <SkillImage src={scImage} />
-              </Skill>
-
-              <Skill>
-                <SkillName>Firebase</SkillName>
-                <SkillImage src={fbImage} />
-              </Skill>
+              {skills.map((skill) => (
+                <Skill>
+                  <SkillName>{skill.name}</SkillName>
+                  <SkillImage src={skill.image}/>
+                </Skill>
+              ))}
               
             </SkillsList>
           </MySkills>
+
         </Info>
       </Wrapper>
     </About>
