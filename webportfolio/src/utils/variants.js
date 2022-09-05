@@ -10,7 +10,7 @@ export const variant = {
 };
 
 export const workVariant = {
-  hidden: { opacity: 0, y: '6vw' },
+  hidden: { opacity: 0, y: '3vw' },
   visible: { 
     y: 0,
     opacity: 1,

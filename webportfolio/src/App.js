@@ -9,7 +9,7 @@ import { useState } from 'react'
 
 function App() {
 
-  const lightTheme = {
+  const darkTheme = {
     colors: {
       dark: '#0d1321',
       lightDark: '#1d2d44',
@@ -19,7 +19,7 @@ function App() {
     }
   };
 
-  const darkTheme = {
+  const lightTheme = {
     colors :{
       dark: '#f0ebd8',
       lightDark: '#748cab',
@@ -29,11 +29,9 @@ function App() {
     }
   };
 
-  const [colorTheme, setColorTheme] = useState('dark');
+  const [colorTheme, setColorTheme] = useState('light');
 
   return (
-    
-    
       <div className="App">
         <ThemeProvider theme ={colorTheme === 'light' ? lightTheme : darkTheme}>
           
@@ -42,26 +40,18 @@ function App() {
                           darkTheme={darkTheme}
                           lightTheme={lightTheme}/>
               
-              
               <GlobalContainer>
 
-                
                   <AboutPage />
-                
-
                 
                   <MyWork />
                 
-
-                
                   <Contact />
                 
-
               </GlobalContainer>
            
           <GlobalStyles />
-          
-          
+                    
         </ThemeProvider>
       </div>
     

@@ -1,18 +1,21 @@
 import styled from 'styled-components';
-import { Container, PageTitle } from '../../GlobalStyles'
+import { Container } from '../../GlobalStyles'
 import { motion } from 'framer-motion'
 import { DefaultButton } from '../../GlobalStyles';
 
 export const Work = styled.section`
   min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export const Wrapper = styled(Container)`
-  padding: 120px 40px 40px 40px;
+  padding: 40px;
   display: flex; 
   align-items: flex-start;
   @media(max-width: 1057px) {
-    padding: 120px 10px 40px 20px;
+    padding: 40px 10px 40px 20px;
   }
   @media(max-width: 902px) {
     padding: 10px;
@@ -87,6 +90,7 @@ export const WorkImage = styled.div`
   background-position: 0 0;
   left: 0;
   box-shadow: 3px 3px 5px black;
+  border-radius: 12px;
   transition: ease-in-out .1s;
   :hover {
     box-shadow: 5px 5px 10px black;
@@ -111,12 +115,13 @@ export const WorkTitle = styled.h1`
 export const WorkDesc = styled.p`
   color: ${({theme}) => theme.colors.dark};
   font-weight: 200;
-  opacity: 110;
+  opacity: .9;
   width: 60%;
   background-color: ${({theme}) => theme.colors.lightTeal};
   padding: 24px;
-  box-shadow: 1px 1px 5px black;
+  box-shadow: 3px 3px 5px black;
   @media(max-width: 714px) {
+    opacity: 1;
     width: 100%;
     padding: 12px;
   }

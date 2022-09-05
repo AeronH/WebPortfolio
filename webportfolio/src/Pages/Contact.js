@@ -1,13 +1,13 @@
 import React, { useRef, useEffect } from 'react'
 import emailjs from '@emailjs/browser';
-import { ContactContainer, Wrapper, ContactH2, IconContainer, IconButton } from '../Components/Contact/Contact.elements'
-import { PageTitle } from '../GlobalStyles'
+import { ContactContainer, Wrapper, ContactH2, IconContainer, IconButton, ContactForm,
+ContactInput, ContactTextArea, ContactSendButton, StyledEmail } from '../Components/Contact/Contact.elements'
+import { PageTitle, PageBreak } from '../GlobalStyles'
 import { useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { variant } from '../utils/variants'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
 
 function Contact() {
 
@@ -17,7 +17,6 @@ function Contact() {
   useEffect(() => {
     if(inView) control.start('visible');
   }, [control, inView]);
-
 
 
   const form = useRef();
@@ -40,6 +39,7 @@ function Contact() {
   };
   return (
     <ContactContainer  id='Contact'>
+      <PageBreak />
       <Wrapper
         id='Contact'
         ref={ref}
@@ -52,23 +52,23 @@ function Contact() {
           Feel free to contact me through any of the methods listed below.
         </ContactH2>
 
-        <ContactH2>Email: <a href='mailto:aeronhorne@gmail.com'>aeronhorne@gmail.com</a></ContactH2>
+        <ContactH2>Email: <StyledEmail href='mailto:aeronhorne@gmail.com'>aeronhorne@gmail.com</StyledEmail></ContactH2>
 
         <IconContainer>
           <IconButton href="https://github.com/AeronH" target="_blank"><GitHubIcon /></IconButton>
 
           <IconButton href='https://www.linkedin.com/in/aeron-horne-051b2a242/' target="_blank"><LinkedInIcon /></IconButton>
         </IconContainer>
+        <ContactH2>
+          Or send me a message!
+        </ContactH2>
 
-        <form ref={form} onSubmit={sendEmail}>
-          <label>Name</label>
-          <input type="text" name="from_name" />
-          <label>Email</label>
-          <input type="email" name="user_email" />
-          <label>Message</label>
-          <textarea name="message" />
-          <input type="submit" value="Send" />
-        </form>
+        <ContactForm ref={form} onSubmit={sendEmail}>
+          <ContactInput type="text" name="from_name" placeholder='Your Name' required/>
+          <ContactInput type="email" name="user_email" placeholder='Your Email' required/>
+          <ContactTextArea name="message" placeholder='Your Message...' required/>
+          <ContactSendButton type="submit" value="Send" />
+        </ContactForm>
       </Wrapper>
     </ContactContainer>
   )

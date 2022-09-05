@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Work, Wrapper, WorkContainer, WorkPageTitle } from '../Components/MyWork/MyWork.elements'
+import { PageBreak } from '../GlobalStyles'
 import WorkCard from '../Components/MyWork/WorkCard'
 import { projects } from '../utils/projects'
 import { useAnimation } from 'framer-motion'
@@ -17,6 +18,7 @@ function MyWork() {
 
   return (
     <Work id="MyWork">
+      <PageBreak/>
       <Wrapper >
           <WorkPageTitle
             ref={ref}

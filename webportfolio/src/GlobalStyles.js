@@ -1,6 +1,4 @@
-import { colors } from "@mui/material";
 import styled, { createGlobalStyle } from "styled-components";
-
 
 const GlobalStyles = createGlobalStyle`
 
@@ -10,7 +8,6 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Sora', sans-serif;
     scroll-behavior: smooth;
-    /* scroll-padding-top: 60px; */
   }
 
   html
@@ -19,7 +16,6 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
     margin: 0px;
     padding: 0px;
-    /* overflow-x: hidden;  */
   }
 
   #particles {
@@ -51,6 +47,12 @@ export const DefaultButton = styled.button`
     cursor: pointer;
     opacity: .8;
   }
+`
+
+export const PageBreak = styled.div`
+  width: 80%;
+  border-bottom: 1px solid gray;
+  margin: 64px 0;
 `
 
 export const PageTitle = styled.h1`

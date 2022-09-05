@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { Container } from '../../GlobalStyles'
-import { PageTitle } from '../../GlobalStyles'
 import { motion } from 'framer-motion'
 
 export const About = styled.section`
@@ -129,7 +128,7 @@ export const Seperator = styled.div`
   @media (max-width: 1057px){
     border-top: 1px solid gray;
     height: 0;
-    width: 100%;
+    width: 95%;
     margin: 24px auto;
   }
 `
