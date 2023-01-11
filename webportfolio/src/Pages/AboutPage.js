@@ -13,6 +13,10 @@ import fbImage from '../Images/kisspng-firebase-cloud-messaging-computer-icons-g
 import nextImage from'../Images/800px-Nextjs-logo.svg.png'
 import tsImage from '../Images/Typescript_logo_2020.svg.png'
 import twImage from '../Images/Tailwind_CSS_Logo.svg.png'
+import vueImage from '../Images/58482acecef1014c0b5e4a1e.png'
+import phpImage from '../Images/Webysther_20160423_-_Elephpant.svg.png'
+import laravelImage from '../Images/1200px-Laravel.svg.png'
+import pgsImage from '../Images/Postgresql_elephant.svg.png'
 import { useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { variant } from '../utils/variants'
@@ -24,8 +28,12 @@ function AboutPage() {
     {name:'CSS', image: cssImage},
     {name:'JavaScript', image: jsImage},
     {name:'TypeScript', image: tsImage},
-    {name:'React', image: reactImage},
-    {name:'NextJS', image: nextImage},
+    {name:'VueJs', image: vueImage},
+    {name:'ReactJs', image: reactImage},
+    {name:'NextJs', image: nextImage},
+    {name:'PHP', image: phpImage},
+    {name:'Laravel', image: laravelImage},
+    {name:'PostgreSQL', image: pgsImage},
     {name:'TailwindCSS', image: twImage},
     {name:'Styled Components', image: scImage},
     {name:'Firebase', image: fbImage},
@@ -84,4 +92,3 @@ function AboutPage() {
 }
 
 export default AboutPage
-

@@ -59,7 +59,7 @@ const variant = {
 
             <IconButton href='https://www.linkedin.com/in/aeron-horne-051b2a242/' target="_blank"><LinkedInIcon /></IconButton>
 
-            <ResumeButton as='a' href='https://drive.google.com/file/d/1Aepo-F0KVvxkAHf3b75lFJ--F4hUl2Il/view?usp=sharing' target="_blank">Resume</ResumeButton>
+            <ResumeButton as='a' href='https://drive.google.com/file/d/1gLFi0hVgV1bvNacB5xStjJaTLvZxwe4t/view?usp=share_link' target="_blank">Resume</ResumeButton>
           </Links>
         </TitleCard>
 

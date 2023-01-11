@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { WorkCardContainer, WorkImage, WorkDesc, WorkLinks, WorkTitle, WorkTools, WorkTool, WorkLinkButton, WorkImageContainer } from './MyWork.elements';
+import { WorkCardContainer, WorkImage, WorkDesc, WorkLinks, WorkTitle, WorkTools, WorkTool, WorkLinkButton } from './MyWork.elements';
 import { useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { workVariant } from '../../utils/variants'
